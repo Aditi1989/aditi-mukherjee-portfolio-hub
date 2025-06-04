@@ -1,5 +1,5 @@
 
-import { GraduationCap, MapPin, Briefcase, School } from "lucide-react";
+import { GraduationCap, MapPin, Briefcase, School, BookOpen } from "lucide-react";
 
 const About = () => {
   return (
@@ -30,26 +30,32 @@ const About = () => {
               {
                 icon: GraduationCap,
                 title: "Current Education",
-                subtitle: "B.Tech in CS, KIIT (2022–2026)",
+                subtitle: "Kalinga Institute of Industrial Technology, Bhubaneswar (2022–2026)",
                 color: "from-blue-500 to-cyan-500"
               },
               {
                 icon: School,
-                title: "Previous Education",
-                subtitle: "Carmel School, Dhanbad",
+                title: "12th Grade",
+                subtitle: "Narbheram Hansraj English School, Jamshedpur (2020–2022)",
                 color: "from-green-500 to-emerald-500"
+              },
+              {
+                icon: BookOpen,
+                title: "10th Grade",
+                subtitle: "St. Joseph's Convent High School, Mosaboni (2008–2020)",
+                color: "from-purple-500 to-pink-500"
               },
               {
                 icon: Briefcase,
                 title: "Experience",
                 subtitle: "TCS Internship (Onsite till June 2025)",
-                color: "from-purple-500 to-pink-500"
+                color: "from-orange-500 to-red-500"
               },
               {
                 icon: MapPin,
                 title: "Location",
                 subtitle: "From Ghatsila, Jharkhand",
-                color: "from-orange-500 to-red-500"
+                color: "from-indigo-500 to-purple-500"
               }
             ].map((item, index) => (
               <div key={index} className="group flex items-center gap-6 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:scale-105">
