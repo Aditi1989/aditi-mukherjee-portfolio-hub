@@ -6,39 +6,39 @@ const Projects = () => {
   const projects = [
     {
       title: "DressMeUp – Outfit Recommender",
-      description: "AI-based fashion recommendation engine built during TCS internship. Suggests outfits based on user preferences, weather conditions, and occasions using contextual data processing and machine learning algorithms.",
-      technologies: ["Python", "TensorFlow", "React.js", "Node.js", "Weather API"],
-      role: "Full-Stack Developer & ML Engineer",
+      description: "AI-powered fashion recommendation system built during TCS internship. Suggests personalized outfits based on user preferences, weather conditions, and contextual factors.",
+      technologies: ["Python", "Machine Learning", "AI", "TCS Platform"],
+      role: "Full-Stack Developer & AI Engineer",
       github: "https://github.com/Aditi1989/outfit_recommendor",
-      image: "🎨",
-      gradient: "from-pink-500 to-rose-500"
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500",
+      gradient: "from-pink-500 to-purple-500"
     },
     {
       title: "Customer Feedback Analysis",
-      description: "Real-time sentiment analysis system using VADER and RoBERTa models. Built with Streamlit for interactive data visualization and comprehensive feedback processing pipeline.",
+      description: "Real-time sentiment analysis system using VADER and RoBERTa models. Built with Streamlit for interactive data visualization and sentiment tracking.",
       technologies: ["Python", "VADER", "RoBERTa", "Streamlit", "NLP"],
       role: "Data Scientist & Frontend Developer",
       github: "https://github.com/Aditi1989/customer_feedback_system",
-      image: "📊",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "EEG Signal Analysis System",
-      description: "Advanced seizure prediction system achieving 93% accuracy using machine learning on EEG data. Implemented signal processing techniques and multiple ML algorithms for medical diagnosis.",
-      technologies: ["Python", "Scikit-learn", "Signal Processing", "ML", "Healthcare"],
+      description: "Advanced machine learning system for seizure prediction from EEG data. Achieved 93% accuracy using sophisticated signal processing and ML algorithms.",
+      technologies: ["Python", "Machine Learning", "Signal Processing", "Data Analysis"],
       role: "ML Engineer & Data Analyst",
       github: "https://github.com/Aditi1989/EEG-SIGNAL-ANALYSIS-PROJECT",
-      image: "🧠",
-      gradient: "from-purple-500 to-indigo-500"
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500",
+      gradient: "from-green-500 to-emerald-500"
     },
     {
-      title: "Movie Recommender System",
-      description: "Intelligent movie recommendation engine using collaborative filtering and content-based algorithms. Features personalized suggestions and user preference learning.",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Flask", "Machine Learning"],
-      role: "Full-Stack Developer",
+      title: "Movie Recommender",
+      description: "Intelligent movie recommendation system that suggests personalized content based on user preferences and viewing history using collaborative filtering.",
+      technologies: ["React", "Vite", "JavaScript", "ESLint"],
+      role: "Frontend Developer",
       github: "https://github.com/Aditi1989/MovieRecommendor",
-      image: "🎬",
-      gradient: "from-green-500 to-emerald-500"
+      image: "https://images.unsplash.com/photo-1489599904792-95282350e39c?w=500",
+      gradient: "from-orange-500 to-red-500"
     }
   ];
 

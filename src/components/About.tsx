@@ -1,5 +1,5 @@
 
-import { GraduationCap, MapPin, Briefcase, Palette } from "lucide-react";
+import { GraduationCap, MapPin, Briefcase, School } from "lucide-react";
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
             <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 I'm a Computer Science undergraduate at KIIT, passionate about full-stack development, AI/ML, and UI/UX design. 
-                Currently interning at TCS, where I'm building a smart outfit recommendation system. I thrive on 
+                Currently interning at TCS onsite till June 2025, where I'm building a smart outfit recommendation system. I thrive on 
                 solving real-world problems through data, design, and scalable code.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -29,21 +29,21 @@ const About = () => {
             {[
               {
                 icon: GraduationCap,
-                title: "Education",
+                title: "Current Education",
                 subtitle: "B.Tech in CS, KIIT (2022–2026)",
                 color: "from-blue-500 to-cyan-500"
               },
               {
-                icon: Briefcase,
-                title: "Experience",
-                subtitle: "2+ Internships",
-                color: "from-purple-500 to-pink-500"
+                icon: School,
+                title: "Previous Education",
+                subtitle: "Carmel School, Dhanbad",
+                color: "from-green-500 to-emerald-500"
               },
               {
-                icon: Palette,
-                title: "Design",
-                subtitle: "UI/UX Designer",
-                color: "from-green-500 to-emerald-500"
+                icon: Briefcase,
+                title: "Experience",
+                subtitle: "TCS Internship (Onsite till June 2025)",
+                color: "from-purple-500 to-pink-500"
               },
               {
                 icon: MapPin,

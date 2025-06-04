@@ -43,13 +43,13 @@ const Hero = () => {
       </Button>
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
-        <div className="text-center lg:text-left animate-fade-in space-y-8">
+        <div className="text-center lg:text-left animate-fade-in space-y-8 order-2 lg:order-1">
           <div className="space-y-4">
             <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Hi, I'm <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Aditi</span>
             </h1>
             <h2 className="text-3xl lg:text-4xl text-gray-700 dark:text-gray-300 mb-4 font-semibold">
-              Aspiring Software Engineer & UI/UX Designer
+              Aspiring Software Engineer
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed font-medium">
               I build AI-powered and data-driven solutions with purpose.
@@ -98,18 +98,19 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex justify-center animate-fade-in">
+        <div className="flex justify-center lg:justify-end animate-fade-in order-1 lg:order-2">
           <div className="relative group">
             {/* Animated background circles */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-full animate-spin-slow opacity-75 blur-sm"></div>
             <div className="absolute inset-2 bg-gradient-to-r from-pink-400 via-blue-500 to-purple-500 rounded-full animate-spin-reverse opacity-50 blur-sm"></div>
             
-            {/* Main image container */}
+            {/* Main image container - adjusted for better face positioning */}
             <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-all duration-500">
               <img 
                 src="/lovable-uploads/dd022323-e902-4854-aa01-99a2100583f2.png" 
                 alt="Aditi Mukherjee" 
-                className="w-full h-full object-cover object-center scale-110 hover:scale-125 transition-transform duration-700"
+                className="w-full h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-700"
+                style={{ objectPosition: 'center 15%' }}
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
