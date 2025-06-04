@@ -1,77 +1,122 @@
 
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink, Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const projects = [
     {
       title: "DressMeUp – Outfit Recommender",
-      description: "Built during TCS internship; suggests clothes based on user context and weather using AI/ML algorithms.",
-      technologies: ["Python", "TensorFlow", "React.js", "Node.js", "MongoDB"],
+      description: "AI-based fashion recommendation engine built during TCS internship. Suggests outfits based on user preferences, weather conditions, and occasions using contextual data processing and machine learning algorithms.",
+      technologies: ["Python", "TensorFlow", "React.js", "Node.js", "Weather API"],
+      role: "Full-Stack Developer & ML Engineer",
       github: "https://github.com/Aditi1989/outfit_recommendor",
-      role: "Full-stack Developer & ML Engineer"
+      image: "🎨",
+      gradient: "from-pink-500 to-rose-500"
     },
     {
       title: "Customer Feedback Analysis",
-      description: "Real-time sentiment analysis platform using VADER, RoBERTa, and Streamlit for comprehensive feedback insights.",
-      technologies: ["Python", "NLP", "Streamlit", "VADER", "RoBERTa"],
+      description: "Real-time sentiment analysis system using VADER and RoBERTa models. Built with Streamlit for interactive data visualization and comprehensive feedback processing pipeline.",
+      technologies: ["Python", "VADER", "RoBERTa", "Streamlit", "NLP"],
+      role: "Data Scientist & Frontend Developer",
       github: "https://github.com/Aditi1989/customer_feedback_system",
-      role: "Data Scientist & Backend Developer"
+      image: "📊",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "EEG Signal Analysis System",
-      description: "Achieved 93% accuracy in seizure prediction using machine learning on EEG data for medical applications.",
-      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+      description: "Advanced seizure prediction system achieving 93% accuracy using machine learning on EEG data. Implemented signal processing techniques and multiple ML algorithms for medical diagnosis.",
+      technologies: ["Python", "Scikit-learn", "Signal Processing", "ML", "Healthcare"],
+      role: "ML Engineer & Data Analyst",
       github: "https://github.com/Aditi1989/EEG-SIGNAL-ANALYSIS-PROJECT",
-      role: "ML Engineer & Data Analyst"
+      image: "🧠",
+      gradient: "from-purple-500 to-indigo-500"
     },
     {
       title: "Movie Recommender System",
-      description: "Intelligent movie recommendation system using collaborative filtering and content-based algorithms.",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Flask", "HTML/CSS"],
+      description: "Intelligent movie recommendation engine using collaborative filtering and content-based algorithms. Features personalized suggestions and user preference learning.",
+      technologies: ["Python", "Pandas", "Scikit-learn", "Flask", "Machine Learning"],
+      role: "Full-Stack Developer",
       github: "https://github.com/Aditi1989/MovieRecommendor",
-      role: "Full-stack Developer"
+      image: "🎬",
+      gradient: "from-green-500 to-emerald-500"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Sparkles className="text-blue-500" size={32} />
+            <h2 className="text-5xl font-bold text-gray-900 dark:text-white">Featured Projects</h2>
+            <Sparkles className="text-purple-500" size={32} />
+          </div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-600 dark:text-gray-400 mt-6 max-w-3xl mx-auto">
+            A showcase of innovative solutions combining AI, machine learning, and full-stack development
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+            <div key={index} className="group relative">
+              {/* Background glow effect */}
+              <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500`}></div>
               
-              <div className="mb-4">
-                <p className="text-sm font-medium text-gray-700 mb-2">Role: {project.role}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="px-2 py-1 bg-primary/10 text-primary rounded text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 group-hover:border-transparent h-full flex flex-col">
+                {/* Project Header */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`text-4xl p-4 bg-gradient-to-r ${project.gradient} rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="filter drop-shadow-sm">{project.image}</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                      {project.title}
+                    </h3>
+                    <p className={`text-sm font-semibold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
+                      {project.role}
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex gap-3">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => window.open(project.github, '_blank')}
-                  className="flex items-center gap-2"
-                >
-                  <Github size={16} />
-                  Code
-                </Button>
+                {/* Project Description */}
+                <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
+                  {project.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className={`px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-full text-sm font-medium shadow-lg hover:scale-105 transition-transform duration-200`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <Button
+                    asChild
+                    className={`flex-1 bg-gradient-to-r ${project.gradient} hover:shadow-xl hover:scale-105 transition-all duration-300 text-white border-0`}
+                  >
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2" size={20} />
+                      View Code
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="px-6 hover:scale-105 transition-all duration-300 border-2"
+                  >
+                    <ExternalLink size={20} />
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
